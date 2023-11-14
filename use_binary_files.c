@@ -30,27 +30,27 @@ int main() {
 
     printf("Values :\n\n");
 
-    /* Déclaration des deux varibles de taille */
+    /* Declaration of both size variable */
     int size;
     int size2;
 
-    /* Récupération de la taille da la prochaine chaine contenu dans le fichier */
+    /* Get the size of the next string contained in the file*/
     fread(&size, sizeof(int), 1, file);
     char buffer[size];
-    /* Récupération de la 1ère chaine */
+    /* Get the first string */
     fread(buffer, sizeof(char), size, file);
-    buffer[size] = '\0'; /* Gestion de l'erreur de taille */
+    buffer[size] = '\0'; /* Size error management */
 
 
-    /* Récupération de la taille da la prochaine chaine contenu dans le fichier */
+    /* Get the size of the next string contained in the file*/
     fread(&size2, sizeof(int), 1, file);
     char buffer2[size2];
-    /* Récupération de la 2e chaine */
+    /* Get the second string */
     fread(buffer2, sizeof(char), size2, file);
-    buffer2[size2] = '\0'; /* Gestion de l'erreur de taille */
+    buffer2[size2] = '\0'; /* Size error management */
 
 
-    /* Affichage des deux chaines */
+    /* Show both strings */
     printf("%s\n", buffer);
     printf("%s\n", buffer2);
 
