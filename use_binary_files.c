@@ -30,7 +30,7 @@ int main() {
 
     printf("Values :\n\n");
 
-    /* Declaration of both size variable */
+    /* Declaration of both variable size */
     int size;
     int size2;
 
